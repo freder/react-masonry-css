@@ -1,9 +1,9 @@
 'use strict'
 
-const React = require('react')
-const ReactDom = require('react-dom')
-const Masonry = require('../lib/ReactMasonry')
-//import {Masonry} from '../lib-es5/ReactMasonry'
+const React = require('react');
+const ReactDom = require('react-dom');
+const Masonry = require('../lib/ReactMasonry');
+
 
 class App extends React.Component {
 	constructor (props) {
