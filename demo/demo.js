@@ -20,15 +20,26 @@ class App extends React.Component {
       [4, '(min-width: 1101px)'],
     ];
 
+    var heights = [100, 500, 300, 100, 200, 500, 300, 200, 100, 100];
+
     return (
       <div>
         <Masonry
           breakpointCols={breakpointCols}
+          heights={heights}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
-          <div>Item #1z</div>
-          <div>Item #2</div>
+          {heights
+            .map((h, i) => {
+              return <div 
+                style={{ height: h }}
+                key={`${i}-${h}`}
+              >
+                {i}. {h}
+              </div>
+            })
+          }
         </Masonry>
       </div>
     );
